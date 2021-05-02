@@ -1,12 +1,11 @@
 import React from 'react';
-import CommentBox from './components/CommentBox';
-import CommentList from './components/CommentList';
+import Counter from './Counter';
+import './App.css';
 
 const App = () => {
   return (
-    <div>
-      <CommentBox />
-      <CommentList />
+    <div className='App'>
+      <Counter />
     </div>
   );
 };
