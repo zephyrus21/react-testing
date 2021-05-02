@@ -8,9 +8,23 @@ const Counter = () => {
     <div>
       <h1 data-testid='header'>Counter</h1>
       <h2 data-testid='counter'>{counterValue}</h2>
-      <button data-testid='sub-btn'>-</button>
-      <input type='number' data-testid='input' value={value} />
-      <button data-testid='add-btn'>+</button>
+      <button
+        onClick={() => setCounterValue(counterValue - value)}
+        data-testid='sub-btn'>
+        -
+      </button>
+      <input
+        style={{ textAlign: 'center' }}
+        type='number'
+        data-testid='input'
+        value={value}
+        onChange={(e) => setValue(parseInt(e.target.value))}
+      />
+      <button
+        onClick={() => setCounterValue(counterValue + value)}
+        data-testid='add-btn'>
+        +
+      </button>
     </div>
   );
 };
